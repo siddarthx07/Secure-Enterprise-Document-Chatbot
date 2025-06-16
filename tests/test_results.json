@@ -1,0 +1,1271 @@
+{
+  "admin": {
+    "user_info": {
+      "email": "siddarthbandi0707@gmail.com",
+      "role": "Admin"
+    },
+    "public_access": [
+      {
+        "query": "What is our vacation policy?",
+        "response": "According to our policy, employees receive 15 vacation days per year.",
+        "sources": [],
+        "response_time": 0.0005986690521240234,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "How many vacation days do employees get?",
+        "response": "According to our policy, employees receive 15 vacation days per year.",
+        "sources": [],
+        "response_time": 0.0001010894775390625,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What are the standard office hours?",
+        "response": "I understand you're asking about: What are the standard office hours?. Let me help you with that.",
+        "sources": [],
+        "response_time": 7.796287536621094e-05,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What is the code of conduct at TechConsult?",
+        "response": "I understand you're asking about: What is the code of conduct at TechConsult?. Let me help you with that.",
+        "sources": [],
+        "response_time": 7.605552673339844e-05,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "How do I submit an expense report?",
+        "response": "I understand you're asking about: How do I submit an expense report?. Let me help you with that.",
+        "sources": [],
+        "response_time": 7.4776771068573,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What benefits does TechConsult offer?",
+        "response": "I understand you're asking about: What benefits does TechConsult offer?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.00022602081298828125,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "How do I contact HR?",
+        "response": "I understand you're asking about: How do I contact HR?. Let me help you with that.",
+        "sources": [],
+        "response_time": 9.012222290039062e-05,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What is the PTO policy?",
+        "response": "According to our policy, employees receive 15 vacation days per year.",
+        "sources": [],
+        "response_time": 7.605552673339844e-05,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What is the attendance policy?",
+        "response": "I understand you're asking about: What is the attendance policy?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.00012874603271484375,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What are the workplace safety procedures?",
+        "response": "I understand you're asking about: What are the workplace safety procedures?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.0001709461212158203,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      }
+    ],
+    "financial_restricted": [
+      {
+        "query": "What was our Q3 2025 revenue?",
+        "response": "Q3 2025 revenue was $2.5M with strong growth in our consulting services.",
+        "sources": [],
+        "response_time": 4.529881000518799,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What is our EBITDA margin for Q3?",
+        "response": "I understand you're asking about: What is our EBITDA margin for Q3?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.00020813941955566406,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "How many new clients did we acquire in Q3?",
+        "response": "I understand you're asking about: How many new clients did we acquire in Q3?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.00018215179443359375,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What was our net income for Q3 2025?",
+        "response": "I understand you're asking about: What was our net income for Q3 2025?. Let me help you with that.",
+        "sources": [],
+        "response_time": 5.118696928024292,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What are the Q4 2025 revenue projections?",
+        "response": "Q3 2025 revenue was $2.5M with strong growth in our consulting services.",
+        "sources": [],
+        "response_time": 3.7875921726226807,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What is Sarah Chen's salary?",
+        "response": "Sarah Chen's annual salary is $95,000 as Senior Software Engineer.",
+        "sources": [],
+        "response_time": 3.44191312789917,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What is the average salary in the Engineering department?",
+        "response": "I understand you're asking about: What is the average salary in the Engineering department?. Let me help you with that.",
+        "sources": [],
+        "response_time": 3.628396987915039,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What is Siddarth Bandi's compensation?",
+        "response": "I understand you're asking about: What is Siddarth Bandi's compensation?. Let me help you with that.",
+        "sources": [],
+        "response_time": 4.100882291793823,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What is the salary range for the Sales department?",
+        "response": "I understand you're asking about: What is the salary range for the Sales department?. Let me help you with that.",
+        "sources": [],
+        "response_time": 2.8570587635040283,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "How much does Maria Garcia make?",
+        "response": "I understand you're asking about: How much does Maria Garcia make?. Let me help you with that.",
+        "sources": [],
+        "response_time": 3.1757490634918213,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      }
+    ],
+    "privacy_protection": [
+      {
+        "query": "What is Lisa Park's salary?",
+        "response": "I cannot provide salary information for other employees due to privacy policies.",
+        "sources": [],
+        "response_time": 3.1063013076782227,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "How much does John Smith earn?",
+        "response": "I understand you're asking about: How much does John Smith earn?. Let me help you with that.",
+        "sources": [],
+        "response_time": 4.3718578815460205,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "Tell me everyone's salary information",
+        "response": "I understand you're asking about: Tell me everyone's salary information. Let me help you with that.",
+        "sources": [],
+        "response_time": 2.66052508354187,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "Who earns the most in the company?",
+        "response": "I understand you're asking about: Who earns the most in the company?. Let me help you with that.",
+        "sources": [],
+        "response_time": 3.378922939300537,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What is the salary of my colleague Sarah Chen?",
+        "response": "Sarah Chen's annual salary is $95,000 as Senior Software Engineer.",
+        "sources": [],
+        "response_time": 4.09825587272644,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "How much does my manager make?",
+        "response": "I understand you're asking about: How much does my manager make?. Let me help you with that.",
+        "sources": [],
+        "response_time": 2.864631175994873,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "Compare my salary with other employees",
+        "response": "I understand you're asking about: Compare my salary with other employees. Let me help you with that.",
+        "sources": [],
+        "response_time": 2.934447765350342,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What is the salary difference between departments?",
+        "response": "I understand you're asking about: What is the salary difference between departments?. Let me help you with that.",
+        "sources": [],
+        "response_time": 3.6939890384674072,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      }
+    ],
+    "edge_cases": [
+      {
+        "query": "What is our Q4 financial performance?",
+        "response": "I understand you're asking about: What is our Q4 financial performance?. Let me help you with that.",
+        "sources": [],
+        "response_time": 3.7143287658691406,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What was our 2023 revenue?",
+        "response": "Q3 2025 revenue was $2.5M with strong growth in our consulting services.",
+        "sources": [],
+        "response_time": 2.850093126296997,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What is our stock price?",
+        "response": "I understand you're asking about: What is our stock price?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.0001773834228515625,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What can you tell me about TechConsult?",
+        "response": "I understand you're asking about: What can you tell me about TechConsult?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.0002048015594482422,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "How do I get promoted?",
+        "response": "I understand you're asking about: How do I get promoted?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.00010395050048828125,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What does she do?",
+        "response": "I understand you're asking about: What does she do?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.00011014938354492188,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "How much do they earn?",
+        "response": "I understand you're asking about: How much do they earn?. Let me help you with that.",
+        "sources": [],
+        "response_time": 3.291663885116577,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      }
+    ],
+    "system_behavior": [
+      {
+        "query": "Hello",
+        "response": "Hello! I'm the TechConsult chatbot. How can I help you today?",
+        "sources": [],
+        "response_time": 4.00543212890625e-05,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What can you do?",
+        "response": "I understand you're asking about: What can you do?. Let me help you with that.",
+        "sources": [],
+        "response_time": 4.57763671875e-05,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "Help me",
+        "response": "I understand you're asking about: Help me. Let me help you with that.",
+        "sources": [],
+        "response_time": 2.8848648071289062e-05,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "Thank you",
+        "response": "I understand you're asking about: Thank you. Let me help you with that.",
+        "sources": [],
+        "response_time": 3.1948089599609375e-05,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "Goodbye",
+        "response": "I understand you're asking about: Goodbye. Let me help you with that.",
+        "sources": [],
+        "response_time": 2.7894973754882812e-05,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      }
+    ],
+    "performance_stats": {
+      "total_queries": 40,
+      "fast_path_count": 20,
+      "avg_response_time": 1.8771392762660981,
+      "denied_count": 0,
+      "error_count": 0
+    }
+  },
+  "junior": {
+    "user_info": {
+      "email": "siddarthbandi07@gmail.com",
+      "role": "Junior"
+    },
+    "public_access": [
+      {
+        "query": "What is our vacation policy?",
+        "response": "According to our policy, employees receive 15 vacation days per year.",
+        "sources": [],
+        "response_time": 0.00011587142944335938,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "How many vacation days do employees get?",
+        "response": "According to our policy, employees receive 15 vacation days per year.",
+        "sources": [],
+        "response_time": 8.916854858398438e-05,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What are the standard office hours?",
+        "response": "I understand you're asking about: What are the standard office hours?. Let me help you with that.",
+        "sources": [],
+        "response_time": 7.581710815429688e-05,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What is the code of conduct at TechConsult?",
+        "response": "I understand you're asking about: What is the code of conduct at TechConsult?. Let me help you with that.",
+        "sources": [],
+        "response_time": 8.797645568847656e-05,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "How do I submit an expense report?",
+        "response": "I understand you're asking about: How do I submit an expense report?. Let me help you with that.",
+        "sources": [],
+        "response_time": 3.8110458850860596,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What benefits does TechConsult offer?",
+        "response": "I understand you're asking about: What benefits does TechConsult offer?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.0003719329833984375,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "How do I contact HR?",
+        "response": "I understand you're asking about: How do I contact HR?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.0001399517059326172,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What is the PTO policy?",
+        "response": "According to our policy, employees receive 15 vacation days per year.",
+        "sources": [],
+        "response_time": 0.00011897087097167969,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What is the attendance policy?",
+        "response": "I understand you're asking about: What is the attendance policy?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.0001811981201171875,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What are the workplace safety procedures?",
+        "response": "I understand you're asking about: What are the workplace safety procedures?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.00024509429931640625,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      }
+    ],
+    "financial_restricted": [
+      {
+        "query": "What was our Q3 2025 revenue?",
+        "response": "Access denied: Financial information is restricted to Manager level and above.",
+        "sources": [],
+        "response_time": 2.86329984664917,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What is our EBITDA margin for Q3?",
+        "response": "Access denied: Financial information is restricted to Manager level and above.",
+        "sources": [],
+        "response_time": 0.0002620220184326172,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "How many new clients did we acquire in Q3?",
+        "response": "I understand you're asking about: How many new clients did we acquire in Q3?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.00025010108947753906,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What was our net income for Q3 2025?",
+        "response": "Access denied: Financial information is restricted to Manager level and above.",
+        "sources": [],
+        "response_time": 4.100771188735962,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What are the Q4 2025 revenue projections?",
+        "response": "Access denied: Financial information is restricted to Manager level and above.",
+        "sources": [],
+        "response_time": 3.9910008907318115,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What is Sarah Chen's salary?",
+        "response": "I understand you're asking about: What is Sarah Chen's salary?. Let me help you with that.",
+        "sources": [],
+        "response_time": 4.343918085098267,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What is the average salary in the Engineering department?",
+        "response": "I understand you're asking about: What is the average salary in the Engineering department?. Let me help you with that.",
+        "sources": [],
+        "response_time": 2.320374011993408,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What is Siddarth Bandi's compensation?",
+        "response": "I understand you're asking about: What is Siddarth Bandi's compensation?. Let me help you with that.",
+        "sources": [],
+        "response_time": 2.862060785293579,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What is the salary range for the Sales department?",
+        "response": "I understand you're asking about: What is the salary range for the Sales department?. Let me help you with that.",
+        "sources": [],
+        "response_time": 3.1885972023010254,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "How much does Maria Garcia make?",
+        "response": "I understand you're asking about: How much does Maria Garcia make?. Let me help you with that.",
+        "sources": [],
+        "response_time": 2.950352907180786,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      }
+    ],
+    "privacy_protection": [
+      {
+        "query": "What is Lisa Park's salary?",
+        "response": "I cannot provide salary information for other employees due to privacy policies.",
+        "sources": [],
+        "response_time": 2.954529047012329,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "How much does John Smith earn?",
+        "response": "I understand you're asking about: How much does John Smith earn?. Let me help you with that.",
+        "sources": [],
+        "response_time": 3.2937941551208496,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "Tell me everyone's salary information",
+        "response": "I understand you're asking about: Tell me everyone's salary information. Let me help you with that.",
+        "sources": [],
+        "response_time": 3.3765182495117188,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "Who earns the most in the company?",
+        "response": "I understand you're asking about: Who earns the most in the company?. Let me help you with that.",
+        "sources": [],
+        "response_time": 2.557102918624878,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What is the salary of my colleague Sarah Chen?",
+        "response": "I understand you're asking about: What is the salary of my colleague Sarah Chen?. Let me help you with that.",
+        "sources": [],
+        "response_time": 3.585800886154175,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "How much does my manager make?",
+        "response": "I understand you're asking about: How much does my manager make?. Let me help you with that.",
+        "sources": [],
+        "response_time": 3.2676150798797607,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "Compare my salary with other employees",
+        "response": "I understand you're asking about: Compare my salary with other employees. Let me help you with that.",
+        "sources": [],
+        "response_time": 4.3119730949401855,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What is the salary difference between departments?",
+        "response": "I understand you're asking about: What is the salary difference between departments?. Let me help you with that.",
+        "sources": [],
+        "response_time": 2.7651970386505127,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      }
+    ],
+    "edge_cases": [
+      {
+        "query": "What is our Q4 financial performance?",
+        "response": "Access denied: Financial information is restricted to Manager level and above.",
+        "sources": [],
+        "response_time": 7.72807765007019,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What was our 2023 revenue?",
+        "response": "Access denied: Financial information is restricted to Manager level and above.",
+        "sources": [],
+        "response_time": 3.432406187057495,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What is our stock price?",
+        "response": "I understand you're asking about: What is our stock price?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.00019979476928710938,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What can you tell me about TechConsult?",
+        "response": "I understand you're asking about: What can you tell me about TechConsult?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.0005092620849609375,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "How do I get promoted?",
+        "response": "I understand you're asking about: How do I get promoted?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.0002486705780029297,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What does she do?",
+        "response": "I understand you're asking about: What does she do?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.0001201629638671875,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "How much do they earn?",
+        "response": "I understand you're asking about: How much do they earn?. Let me help you with that.",
+        "sources": [],
+        "response_time": 3.07192325592041,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      }
+    ],
+    "system_behavior": [
+      {
+        "query": "Hello",
+        "response": "Hello! I'm the TechConsult chatbot. How can I help you today?",
+        "sources": [],
+        "response_time": 0.0001010894775390625,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What can you do?",
+        "response": "I understand you're asking about: What can you do?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.00010395050048828125,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "Help me",
+        "response": "I understand you're asking about: Help me. Let me help you with that.",
+        "sources": [],
+        "response_time": 6.604194641113281e-05,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "Thank you",
+        "response": "I understand you're asking about: Thank you. Let me help you with that.",
+        "sources": [],
+        "response_time": 7.295608520507812e-05,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "Goodbye",
+        "response": "I understand you're asking about: Goodbye. Let me help you with that.",
+        "sources": [],
+        "response_time": 6.29425048828125e-05,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      }
+    ],
+    "performance_stats": {
+      "total_queries": 40,
+      "fast_path_count": 20,
+      "avg_response_time": 1.7694945335388184,
+      "denied_count": 0,
+      "error_count": 0
+    }
+  },
+  "manager": {
+    "user_info": {
+      "email": "siddarth24@vt.edu",
+      "role": "Manager"
+    },
+    "public_access": [
+      {
+        "query": "What is our vacation policy?",
+        "response": "According to our policy, employees receive 15 vacation days per year.",
+        "sources": [],
+        "response_time": 0.0005099773406982422,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "How many vacation days do employees get?",
+        "response": "According to our policy, employees receive 15 vacation days per year.",
+        "sources": [],
+        "response_time": 0.0002422332763671875,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What are the standard office hours?",
+        "response": "I understand you're asking about: What are the standard office hours?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.00019788742065429688,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What is the code of conduct at TechConsult?",
+        "response": "I understand you're asking about: What is the code of conduct at TechConsult?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.00020074844360351562,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "How do I submit an expense report?",
+        "response": "I understand you're asking about: How do I submit an expense report?. Let me help you with that.",
+        "sources": [],
+        "response_time": 2.993739128112793,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What benefits does TechConsult offer?",
+        "response": "I understand you're asking about: What benefits does TechConsult offer?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.00019693374633789062,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "How do I contact HR?",
+        "response": "I understand you're asking about: How do I contact HR?. Let me help you with that.",
+        "sources": [],
+        "response_time": 7.414817810058594e-05,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What is the PTO policy?",
+        "response": "According to our policy, employees receive 15 vacation days per year.",
+        "sources": [],
+        "response_time": 7.581710815429688e-05,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What is the attendance policy?",
+        "response": "I understand you're asking about: What is the attendance policy?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.00012373924255371094,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What are the workplace safety procedures?",
+        "response": "I understand you're asking about: What are the workplace safety procedures?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.00016689300537109375,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      }
+    ],
+    "financial_restricted": [
+      {
+        "query": "What was our Q3 2025 revenue?",
+        "response": "Q3 2025 revenue was $2.5M with strong growth in our consulting services.",
+        "sources": [],
+        "response_time": 3.4596691131591797,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What is our EBITDA margin for Q3?",
+        "response": "I understand you're asking about: What is our EBITDA margin for Q3?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.00016307830810546875,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "How many new clients did we acquire in Q3?",
+        "response": "I understand you're asking about: How many new clients did we acquire in Q3?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.00015783309936523438,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What was our net income for Q3 2025?",
+        "response": "I understand you're asking about: What was our net income for Q3 2025?. Let me help you with that.",
+        "sources": [],
+        "response_time": 3.6015238761901855,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What are the Q4 2025 revenue projections?",
+        "response": "Q3 2025 revenue was $2.5M with strong growth in our consulting services.",
+        "sources": [],
+        "response_time": 5.11903190612793,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What is Sarah Chen's salary?",
+        "response": "Sarah Chen's annual salary is $95,000 as Senior Software Engineer.",
+        "sources": [],
+        "response_time": 8.80957293510437,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What is the average salary in the Engineering department?",
+        "response": "I understand you're asking about: What is the average salary in the Engineering department?. Let me help you with that.",
+        "sources": [],
+        "response_time": 3.681917905807495,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What is Siddarth Bandi's compensation?",
+        "response": "I understand you're asking about: What is Siddarth Bandi's compensation?. Let me help you with that.",
+        "sources": [],
+        "response_time": 2.9707279205322266,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What is the salary range for the Sales department?",
+        "response": "I understand you're asking about: What is the salary range for the Sales department?. Let me help you with that.",
+        "sources": [],
+        "response_time": 3.8930749893188477,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "How much does Maria Garcia make?",
+        "response": "I understand you're asking about: How much does Maria Garcia make?. Let me help you with that.",
+        "sources": [],
+        "response_time": 5.951932191848755,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      }
+    ],
+    "privacy_protection": [
+      {
+        "query": "What is Lisa Park's salary?",
+        "response": "I cannot provide salary information for other employees due to privacy policies.",
+        "sources": [],
+        "response_time": 3.264431953430176,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "How much does John Smith earn?",
+        "response": "I understand you're asking about: How much does John Smith earn?. Let me help you with that.",
+        "sources": [],
+        "response_time": 3.2757010459899902,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "Tell me everyone's salary information",
+        "response": "I understand you're asking about: Tell me everyone's salary information. Let me help you with that.",
+        "sources": [],
+        "response_time": 4.9155848026275635,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "Who earns the most in the company?",
+        "response": "I understand you're asking about: Who earns the most in the company?. Let me help you with that.",
+        "sources": [],
+        "response_time": 3.07478404045105,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What is the salary of my colleague Sarah Chen?",
+        "response": "Sarah Chen's annual salary is $95,000 as Senior Software Engineer.",
+        "sources": [],
+        "response_time": 2.7628958225250244,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "How much does my manager make?",
+        "response": "I understand you're asking about: How much does my manager make?. Let me help you with that.",
+        "sources": [],
+        "response_time": 3.2754099369049072,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "Compare my salary with other employees",
+        "response": "I understand you're asking about: Compare my salary with other employees. Let me help you with that.",
+        "sources": [],
+        "response_time": 2.558316946029663,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What is the salary difference between departments?",
+        "response": "I understand you're asking about: What is the salary difference between departments?. Let me help you with that.",
+        "sources": [],
+        "response_time": 2.8503849506378174,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      }
+    ],
+    "edge_cases": [
+      {
+        "query": "What is our Q4 financial performance?",
+        "response": "I understand you're asking about: What is our Q4 financial performance?. Let me help you with that.",
+        "sources": [],
+        "response_time": 2.8852429389953613,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What was our 2023 revenue?",
+        "response": "Q3 2025 revenue was $2.5M with strong growth in our consulting services.",
+        "sources": [],
+        "response_time": 3.9981770515441895,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      },
+      {
+        "query": "What is our stock price?",
+        "response": "I understand you're asking about: What is our stock price?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.00024199485778808594,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What can you tell me about TechConsult?",
+        "response": "I understand you're asking about: What can you tell me about TechConsult?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.0001709461212158203,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "How do I get promoted?",
+        "response": "I understand you're asking about: How do I get promoted?. Let me help you with that.",
+        "sources": [],
+        "response_time": 8.821487426757812e-05,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What does she do?",
+        "response": "I understand you're asking about: What does she do?. Let me help you with that.",
+        "sources": [],
+        "response_time": 8.082389831542969e-05,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "How much do they earn?",
+        "response": "I understand you're asking about: How much do they earn?. Let me help you with that.",
+        "sources": [],
+        "response_time": 3.2839620113372803,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": false,
+        "status": "success"
+      }
+    ],
+    "system_behavior": [
+      {
+        "query": "Hello",
+        "response": "Hello! I'm the TechConsult chatbot. How can I help you today?",
+        "sources": [],
+        "response_time": 0.000186920166015625,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "What can you do?",
+        "response": "I understand you're asking about: What can you do?. Let me help you with that.",
+        "sources": [],
+        "response_time": 0.0001201629638671875,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "Help me",
+        "response": "I understand you're asking about: Help me. Let me help you with that.",
+        "sources": [],
+        "response_time": 7.486343383789062e-05,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "Thank you",
+        "response": "I understand you're asking about: Thank you. Let me help you with that.",
+        "sources": [],
+        "response_time": 8.511543273925781e-05,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      },
+      {
+        "query": "Goodbye",
+        "response": "I understand you're asking about: Goodbye. Let me help you with that.",
+        "sources": [],
+        "response_time": 8.821487426757812e-05,
+        "filter_action": "allow",
+        "filter_reason": "Query allowed",
+        "fast_path": true,
+        "status": "success"
+      }
+    ],
+    "performance_stats": {
+      "total_queries": 40,
+      "fast_path_count": 20,
+      "avg_response_time": 1.9157332003116607,
+      "denied_count": 0,
+      "error_count": 0
+    }
+  }
+}
