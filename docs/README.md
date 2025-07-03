@@ -1,4 +1,4 @@
-# TechConsult Knowledge Chatbot
+# Enterprise Knowledge Chatbot
 
 An intelligent enterprise chatbot that provides secure, role-based access to company documents using advanced AI and content filtering.
 
