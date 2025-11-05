@@ -410,12 +410,14 @@ def main():
         font-weight: 700 !important;
         color: white !important;
         text-align: center !important;
-        margin-bottom: 2rem !important;
+        margin-bottom: 0.5rem !important;
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
         -webkit-background-clip: text !important;
         -webkit-text-fill-color: transparent !important;
         background-clip: text !important;
         text-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+        width: 100% !important;
+        display: block !important;
     }
     
     /* Info message styling */
