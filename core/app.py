@@ -79,6 +79,7 @@ def main():
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
         overflow: hidden !important;
+        position: relative !important;
     }
     
     /* Sidebar content container */
@@ -98,25 +99,7 @@ def main():
         margin-bottom: 1rem !important;
     }
     
-    /* Fixed user footer */
-    .user-footer {
-        position: fixed !important;
-        bottom: 0 !important;
-        left: 0 !important;
-        width: 21rem !important;
-        background: rgba(255,255,255,0.15) !important;
-        backdrop-filter: blur(15px) !important;
-        border-top: 1px solid rgba(255,255,255,0.2) !important;
-        padding: 12px 16px !important;
-        z-index: 1000 !important;
-    }
     
-    /* Responsive footer width */
-    @media (max-width: 768px) {
-        .user-footer {
-            width: 100% !important;
-        }
-    }
     
     /* Chat history header */
     .sidebar h3 {
@@ -456,6 +439,7 @@ def main():
         }
     }
     </style>
+    
     """, unsafe_allow_html=True)
     
     # Handle authentication and chat history in sidebar

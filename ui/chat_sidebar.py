@@ -60,24 +60,6 @@ class ChatSidebar:
                 # Close scrollable chat history container
                 st.markdown('</div>', unsafe_allow_html=True)
                 
-                # Fixed user info footer
-                user_name = user_email.split('@')[0].title()
-                st.markdown(f"""
-                <div class="user-footer">
-                    <div style="display: flex; align-items: center; color: white;">
-                        <div style="background: rgba(255,255,255,0.2); border-radius: 50%; 
-                                    width: 32px; height: 32px; display: flex; align-items: center; 
-                                    justify-content: center; margin-right: 10px; font-size: 14px;">
-                            👤
-                        </div>
-                        <div>
-                            <div style="font-size: 13px; font-weight: 500;">{user_name}</div>
-                            <div style="font-size: 11px; color: rgba(255,255,255,0.7);">SecureKnowledge AI</div>
-                        </div>
-                    </div>
-                </div>
-                """, unsafe_allow_html=True)
-                
                 return None
             
             # Group sessions by time period
@@ -104,24 +86,6 @@ class ChatSidebar:
             
             # Close scrollable chat history container
             st.markdown('</div>', unsafe_allow_html=True)
-            
-            # Fixed user info footer
-            user_name = user_email.split('@')[0].title()
-            st.markdown(f"""
-            <div class="user-footer">
-                <div style="display: flex; align-items: center; color: white;">
-                    <div style="background: rgba(255,255,255,0.2); border-radius: 50%; 
-                                width: 32px; height: 32px; display: flex; align-items: center; 
-                                justify-content: center; margin-right: 10px; font-size: 14px;">
-                        👤
-                    </div>
-                    <div>
-                        <div style="font-size: 13px; font-weight: 500;">{user_name}</div>
-                        <div style="font-size: 11px; color: rgba(255,255,255,0.7);">SecureKnowledge AI</div>
-                    </div>
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
             
             return selected_session_id
     
