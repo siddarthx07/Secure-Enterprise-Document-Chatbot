@@ -59,14 +59,21 @@ if "user_info" not in st.session_state:
 
 def main():
     """Main application."""
-    st.title("SecureKnowledge AI")
-    st.markdown("""
-    <div id="app-subtitle" class="subtitle-container" style="text-align: center !important; margin-top: -1rem; margin-bottom: 2rem; width: 100% !important; display: flex !important; justify-content: center !important;">
-        <p id="subtitle-text" style="font-size: 1.2rem; color: rgba(255,255,255,0.8); font-weight: 400; margin: 0 !important; text-align: center !important; display: block !important;">
-            Enterprise Internal Knowledge Management System
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
+    # Create centered header section
+    col1, col2, col3 = st.columns([1, 6, 1])
+    with col2:
+        st.markdown("""
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <h1 style="font-size: 3.5rem; font-weight: 700; margin: 0; padding: 0; line-height: 1.1;
+                       color: white;">
+                SecureKnowledge AI
+            </h1>
+            <p style="font-size: 1.2rem; color: rgba(255,255,255,0.8); font-weight: 400; 
+                      margin: 0.5rem 0 0 0; padding: 0; line-height: 1.4;">
+                Enterprise Internal Knowledge Management System
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
     
     # Add modern CSS for enhanced chat history styling
     st.markdown("""
@@ -387,21 +394,58 @@ def main():
         margin-bottom: 8px !important;
     }
     
-    /* Main title styling */
-    .main h1 {
-        font-size: 3.5rem !important;
-        font-weight: 700 !important;
-        color: white !important;
-        text-align: center !important;
-        margin: 0 auto 0.5rem auto !important;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-        -webkit-background-clip: text !important;
-        -webkit-text-fill-color: transparent !important;
-        background-clip: text !important;
-        text-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
-        width: 100% !important;
-        display: block !important;
-        max-width: 100% !important;
+    /* Remove default margins from Streamlit columns */
+    .stColumn {
+        padding: 0 !important;
+    }
+    
+    /* Ensure centered content stays centered */
+    [data-testid="column"] > div {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    
+    /* Hide header anchor links and remove their space */
+    .main h1 a,
+    .main h2 a,
+    .main h3 a,
+    .main h4 a,
+    .main h5 a,
+    .main h6 a {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        width: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Hide all anchor link icons */
+    a[href^="#"] {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        width: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Remove space from header containers */
+    .main h1,
+    .main h2,
+    .main h3 {
+        line-height: 1.2 !important;
+    }
+    
+    /* Alternative - hide the link icon specifically */
+    .css-1v0mbdj,
+    .css-10trblm,
+    [data-testid="StyledLinkIconContainer"] {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        width: 0 !important;
     }
     
     /* Ensure main container is centered */
@@ -411,49 +455,6 @@ def main():
         padding-right: 1rem !important;
     }
     
-    /* Subtitle styling - more specific selectors */
-    .main .subtitle-container {
-        text-align: center !important;
-        width: 100% !important;
-        display: block !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
-    
-    .main .subtitle-container p {
-        text-align: center !important;
-        margin: 0 auto !important;
-        display: block !important;
-        width: 100% !important;
-        text-align: center !important;
-    }
-    
-    /* Target any paragraph that contains the subtitle text */
-    .main p:contains("Enterprise Internal Knowledge Management System") {
-        text-align: center !important;
-        margin: 0 auto !important;
-    }
-    
-    /* Alternative approach - target all paragraphs in main that might be subtitles */
-    .main > div > div > div > div > p {
-        text-align: center !important;
-    }
-    
-    /* ID-based targeting for subtitle */
-    #app-subtitle {
-        text-align: center !important;
-        display: flex !important;
-        justify-content: center !important;
-        width: 100% !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
-    
-    #subtitle-text {
-        text-align: center !important;
-        margin: 0 auto !important;
-        display: block !important;
-    }
     
     /* Info message styling */
     .stAlert[data-baseweb="notification"] p {
