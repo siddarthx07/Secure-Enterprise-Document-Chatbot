@@ -1,5 +1,5 @@
 """
-SecureKnowledge AI
+Enterprise ChatDoc
 
 Streamlit application for document upload and chatbot interface.
 """
@@ -66,7 +66,7 @@ def main():
         <div style="text-align: center; margin-bottom: 2rem;">
             <h1 style="font-size: 3.5rem; font-weight: 700; margin: 0; padding: 0; line-height: 1.1;
                        color: white;">
-                SecureKnowledge AI
+                Enterprise ChatDoc
             </h1>
             <p style="font-size: 1.2rem; color: rgba(255,255,255,0.8); font-weight: 400; 
                       margin: 0.5rem 0 0 0; padding: 0; line-height: 1.4;">
@@ -772,7 +772,7 @@ def display_chat_interface():
                         llm = ChatOpenAI(model_name="gpt-3.5-turbo")
                         
                         # Customize system prompt based on context relevance analysis
-                        system_prompt = f"You are a helpful assistant for SecureKnowledge AI. Answer questions based on the context below. "
+                        system_prompt = f"You are a helpful assistant for Enterprise ChatDoc. Answer questions based on the context below. "
                         
                         # Add confidence guidance based on relevance analysis
                         if avg_relevance < 0.25:

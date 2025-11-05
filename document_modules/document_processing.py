@@ -1,5 +1,5 @@
 """
-Document Processing Module for SecureKnowledge AI
+Document Processing Module for Enterprise ChatDoc
 
 Handles processing uploaded documents from Firebase Storage and indexing them in the vector database.
 """

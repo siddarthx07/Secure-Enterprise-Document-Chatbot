@@ -1,5 +1,5 @@
 """
-Audit logging utility for SecureKnowledge AI
+Audit logging utility for Enterprise ChatDoc
 
 Provides functionality to log sensitive queries and access attempts
 for compliance and security purposes.

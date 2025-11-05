@@ -1,6 +1,6 @@
-# SecureKnowledge AI - API Documentation
+# Enterprise ChatDoc - API Documentation
 
-This document provides comprehensive API documentation for the SecureKnowledge AI system components.
+This document provides comprehensive API documentation for the Enterprise ChatDoc system components.
 
 ## 📋 Table of Contents
 

@@ -1,5 +1,5 @@
 """
-Firebase Authentication Module for SecureKnowledge AI.
+Firebase Authentication Module for Enterprise ChatDoc.
 Handles user authentication, role management, and session control.
 """
 import os

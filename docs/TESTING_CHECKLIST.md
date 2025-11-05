@@ -1,5 +1,5 @@
 
-# SecureKnowledge AI Testing Checklist
+# Enterprise ChatDoc Testing Checklist
 
 ## Pre-Testing Setup
 - [ ] Streamlit app is running on http://localhost:8501
@@ -20,9 +20,9 @@
 - [ ] "What is our vacation policy?"
 - [ ] "How many vacation days do employees get?"
 - [ ] "What are the standard office hours?"
-- [ ] "What is the code of conduct at SecureKnowledge AI?"
+- [ ] "What is the code of conduct at Enterprise ChatDoc?"
 - [ ] "How do I submit an expense report?"
-- [ ] "What benefits does SecureKnowledge AI offer?"
+- [ ] "What benefits does Enterprise ChatDoc offer?"
 - [ ] "How do I contact HR?"
 - [ ] "What is the PTO policy?"
 - [ ] "What is the attendance policy?"
@@ -45,7 +45,7 @@
 
 ### ✅ Public Access Questions (Should Work)
 - [ ] "What is our vacation policy?"
-- [ ] "What benefits does SecureKnowledge AI offer?"
+- [ ] "What benefits does Enterprise ChatDoc offer?"
 - [ ] "How do I contact HR?"
 
 ### ✅ Financial Questions (Should Work)

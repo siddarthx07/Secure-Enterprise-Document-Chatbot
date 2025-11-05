@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Main entry point for SecureKnowledge AI
+Main entry point for Enterprise ChatDoc
 
 This script starts the Streamlit application.
 """

@@ -1,4 +1,4 @@
-# SecureKnowledge AI - Startup Guide
+# Enterprise ChatDoc - Startup Guide
 
 ## 🚀 How to Run the Application
 

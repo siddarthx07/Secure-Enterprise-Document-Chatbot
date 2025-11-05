@@ -1,4 +1,4 @@
-# 🚀 QUICK TESTING GUIDE - SecureKnowledge AI
+# 🚀 QUICK TESTING GUIDE - Enterprise ChatDoc
 
 ## 🎯 IMMEDIATE TESTING STEPS
 
