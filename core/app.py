@@ -362,7 +362,7 @@ def display_chat_interface():
                         # (Financial filtering removed)
                         is_restricted_query = False
                         
-                        # Re-run financial content filtering with actual document context
+                        # run financial content filtering with actual document context
                         filter_result = financial_filter.process_query(
                             query=prompt,
                             user_email=user_email,

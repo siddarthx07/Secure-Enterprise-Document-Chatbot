@@ -26,7 +26,7 @@ class ContentSensitivity(Enum):
 @dataclass
 class NERResult:
     """Named Entity Recognition result"""
-    entities: List[Dict[str, str]]  # [{"text": "Lisa Park", "label": "PERSON"}, ...]
+    entities: List[Dict[str, str]]  
     person_names: List[str]
     financial_terms: List[str]
     confidence: float

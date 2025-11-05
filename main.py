@@ -2,7 +2,7 @@
 """
 Main entry point for TechConsult Inc Knowledge Chatbot
 
-This script starts the Streamlit application from the reorganized directory structure.
+This script starts the Streamlit application.
 """
 
 import sys

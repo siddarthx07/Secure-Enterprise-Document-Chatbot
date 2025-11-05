@@ -80,4 +80,9 @@ test_results/
 
 # OpenAI API keys and other secrets
 openai_key.txt
-api_keys.txt 
+api_keys.txt
+
+# Documentation files
+docs/CODE_WALKTHROUGH_GUIDE.md
+docs/COMPLETE_CODE_WALKTHROUGH.md
+docs/WALKTHROUGH_CHEAT_SHEET.md 
