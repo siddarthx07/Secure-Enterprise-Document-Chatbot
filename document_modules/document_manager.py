@@ -23,7 +23,7 @@ class DocumentManager:
         
         # Initialize Firebase Storage
         try:
-            # For TechConsult Inc project, we use the storage bucket name from config
+            # For SecureKnowledge AI project, we use the storage bucket name from config
             # Bucket name should match what's shown in Firebase console
             self.bucket = storage.bucket("chatbot-c14e4.firebasestorage.app")
             

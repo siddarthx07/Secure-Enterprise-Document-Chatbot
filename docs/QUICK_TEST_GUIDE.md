@@ -1,4 +1,4 @@
-# 🚀 QUICK TESTING GUIDE - TechConsult Chatbot
+# 🚀 QUICK TESTING GUIDE - SecureKnowledge AI
 
 ## 🎯 IMMEDIATE TESTING STEPS
 

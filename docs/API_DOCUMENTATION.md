@@ -1,6 +1,6 @@
-# TechConsult Knowledge Chatbot - API Documentation
+# SecureKnowledge AI - API Documentation
 
-This document provides comprehensive API documentation for the TechConsult Knowledge Chatbot system components.
+This document provides comprehensive API documentation for the SecureKnowledge AI system components.
 
 ## 📋 Table of Contents
 

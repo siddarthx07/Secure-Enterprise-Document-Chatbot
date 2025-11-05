@@ -1,4 +1,4 @@
-# TechConsult Inc Knowledge Chatbot - Startup Guide
+# SecureKnowledge AI - Startup Guide
 
 ## 🚀 How to Run the Application
 

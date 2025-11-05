@@ -1,5 +1,5 @@
 """
-TechConsult Inc Knowledge Chatbot
+SecureKnowledge AI
 
 Streamlit application for document upload and chatbot interface.
 """
@@ -59,7 +59,7 @@ if "user_info" not in st.session_state:
 
 def main():
     """Main application."""
-    st.title("TechConsult Inc Knowledge Chatbot")
+    st.title("SecureKnowledge AI")
     
     # Add custom CSS for better chat history styling
     st.markdown("""
@@ -251,7 +251,7 @@ def display_chat_interface():
             st.markdown(message["content"])
     
     # Chat input (will be positioned at the bottom via CSS)
-    prompt = st.chat_input("Ask a question about TechConsult documents")
+    prompt = st.chat_input("Ask a question about your documents")
     
     # Handle prompt if entered
     if prompt:
@@ -406,7 +406,7 @@ def display_chat_interface():
                         llm = ChatOpenAI(model_name="gpt-3.5-turbo")
                         
                         # Customize system prompt based on context relevance analysis
-                        system_prompt = f"You are a helpful assistant for TechConsult Inc. Answer questions based on the context below. "
+                        system_prompt = f"You are a helpful assistant for SecureKnowledge AI. Answer questions based on the context below. "
                         
                         # Add confidence guidance based on relevance analysis
                         if avg_relevance < 0.25:

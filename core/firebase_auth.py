@@ -1,5 +1,5 @@
 """
-Firebase Authentication Module for TechConsult Inc Knowledge Chatbot.
+Firebase Authentication Module for SecureKnowledge AI.
 Handles user authentication, role management, and session control.
 """
 import os

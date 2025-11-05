@@ -1,2 +1,2 @@
-# TechConsult Inc Knowledge Chatbot
+# SecureKnowledge AI
 __version__ = "1.0.0" 

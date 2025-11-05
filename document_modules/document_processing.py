@@ -1,5 +1,5 @@
 """
-Document Processing Module for TechConsult Inc Knowledge Chatbot
+Document Processing Module for SecureKnowledge AI
 
 Handles processing uploaded documents from Firebase Storage and indexing them in the vector database.
 """

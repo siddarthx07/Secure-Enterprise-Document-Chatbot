@@ -1,5 +1,5 @@
 
-# TechConsult Chatbot Testing Checklist
+# SecureKnowledge AI Testing Checklist
 
 ## Pre-Testing Setup
 - [ ] Streamlit app is running on http://localhost:8501
@@ -20,9 +20,9 @@
 - [ ] "What is our vacation policy?"
 - [ ] "How many vacation days do employees get?"
 - [ ] "What are the standard office hours?"
-- [ ] "What is the code of conduct at TechConsult?"
+- [ ] "What is the code of conduct at SecureKnowledge AI?"
 - [ ] "How do I submit an expense report?"
-- [ ] "What benefits does TechConsult offer?"
+- [ ] "What benefits does SecureKnowledge AI offer?"
 - [ ] "How do I contact HR?"
 - [ ] "What is the PTO policy?"
 - [ ] "What is the attendance policy?"
@@ -45,7 +45,7 @@
 
 ### ✅ Public Access Questions (Should Work)
 - [ ] "What is our vacation policy?"
-- [ ] "What benefits does TechConsult offer?"
+- [ ] "What benefits does SecureKnowledge AI offer?"
 - [ ] "How do I contact HR?"
 
 ### ✅ Financial Questions (Should Work)

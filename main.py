@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Main entry point for TechConsult Inc Knowledge Chatbot
+Main entry point for SecureKnowledge AI
 
 This script starts the Streamlit application.
 """

@@ -1,5 +1,5 @@
 """
-Audit logging utility for TechConsult Knowledge Chatbot
+Audit logging utility for SecureKnowledge AI
 
 Provides functionality to log sensitive queries and access attempts
 for compliance and security purposes.
