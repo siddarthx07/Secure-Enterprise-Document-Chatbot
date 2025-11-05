@@ -27,19 +27,57 @@ class ChatSidebar:
             Selected session ID or None
         """
         with st.sidebar:
-            # Header with new chat button
-            st.markdown("### 💬 Chat History")
-            if st.button("➕ New Chat", help="Start a new conversation", key="new_chat_btn", use_container_width=True):
+            # Fixed header with icon and new chat button
+            st.markdown("""
+            <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                <div style="background: rgba(255,255,255,0.1); border-radius: 8px; padding: 8px; margin-right: 12px;">
+                    💬
+                </div>
+                <h3 style="margin: 0; color: white; font-weight: 600;">Chat History</h3>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            if st.button("✨ New Chat", help="Start a new conversation", key="new_chat_btn", use_container_width=True):
                 return self._create_new_chat(user_email)
             
-            st.markdown("---")
+            st.markdown('<div style="height: 1px; background: rgba(255,255,255,0.2); margin: 1rem 0;"></div>', unsafe_allow_html=True)
+            
+            # Start scrollable chat history container
+            st.markdown('<div class="chat-history-container">', unsafe_allow_html=True)
             
             # Get user's chat sessions
             sessions = self.chat_manager.get_user_sessions(user_email)
             
             if not sessions:
-                st.markdown("*No chat history yet*")
-                st.markdown("Start a new conversation!")
+                st.markdown("""
+                <div style="text-align: center; padding: 2rem 1rem; color: rgba(255,255,255,0.6);">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">💭</div>
+                    <div style="font-size: 14px; margin-bottom: 0.5rem;">No conversations yet</div>
+                    <div style="font-size: 12px;">Click "New Chat" to get started!</div>
+                </div>
+                """, unsafe_allow_html=True)
+                
+                # Close scrollable chat history container
+                st.markdown('</div>', unsafe_allow_html=True)
+                
+                # Fixed user info footer
+                user_name = user_email.split('@')[0].title()
+                st.markdown(f"""
+                <div class="user-footer">
+                    <div style="display: flex; align-items: center; color: white;">
+                        <div style="background: rgba(255,255,255,0.2); border-radius: 50%; 
+                                    width: 32px; height: 32px; display: flex; align-items: center; 
+                                    justify-content: center; margin-right: 10px; font-size: 14px;">
+                            👤
+                        </div>
+                        <div>
+                            <div style="font-size: 13px; font-weight: 500;">{user_name}</div>
+                            <div style="font-size: 11px; color: rgba(255,255,255,0.7);">SecureKnowledge AI</div>
+                        </div>
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+                
                 return None
             
             # Group sessions by time period
@@ -47,17 +85,43 @@ class ChatSidebar:
             
             selected_session_id = None
             
-            # Render grouped sessions
+            # Render grouped sessions with modern styling
             for time_group, group_sessions in grouped_sessions.items():
                 if group_sessions:  # Only show groups that have sessions
-                    st.markdown(f"**{time_group}**")
+                    # Time group header with modern styling
+                    st.markdown(f"""
+                    <div style="color: rgba(255,255,255,0.8); font-size: 12px; font-weight: 500; 
+                                text-transform: uppercase; letter-spacing: 0.5px; margin: 1rem 0 0.5rem 0;">
+                        {time_group}
+                    </div>
+                    """, unsafe_allow_html=True)
                     
                     for session in group_sessions:
                         selected_session_id = self._render_session_item(session, user_email) or selected_session_id
                     
-                    st.markdown("")  # Add spacing between groups
+                    # Add subtle spacing between groups
+                    st.markdown('<div style="height: 0.5rem;"></div>', unsafe_allow_html=True)
             
-            # Footer - removed stats as requested
+            # Close scrollable chat history container
+            st.markdown('</div>', unsafe_allow_html=True)
+            
+            # Fixed user info footer
+            user_name = user_email.split('@')[0].title()
+            st.markdown(f"""
+            <div class="user-footer">
+                <div style="display: flex; align-items: center; color: white;">
+                    <div style="background: rgba(255,255,255,0.2); border-radius: 50%; 
+                                width: 32px; height: 32px; display: flex; align-items: center; 
+                                justify-content: center; margin-right: 10px; font-size: 14px;">
+                        👤
+                    </div>
+                    <div>
+                        <div style="font-size: 13px; font-weight: 500;">{user_name}</div>
+                        <div style="font-size: 11px; color: rgba(255,255,255,0.7);">SecureKnowledge AI</div>
+                    </div>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
             
             return selected_session_id
     
@@ -82,83 +146,106 @@ class ChatSidebar:
         is_editing = st.session_state.get(edit_mode_key, False)
         
         if is_editing:
-            # Edit mode: show text input and save/cancel buttons
+            # Edit mode with modern styling
+            st.markdown("""
+            <div style="background: rgba(255,255,255,0.1); border-radius: 8px; padding: 8px; margin: 4px 0;">
+                <div style="color: rgba(255,255,255,0.8); font-size: 11px; margin-bottom: 4px;">✏️ Editing title</div>
+            </div>
+            """, unsafe_allow_html=True)
+            
             new_title = st.text_input(
                 "Edit title",
                 value=session.title,
                 key=f"title_input_{session.session_id}",
-                label_visibility="collapsed"
+                label_visibility="collapsed",
+                placeholder="Enter new title..."
             )
             
-            # Save and Cancel buttons in separate rows to avoid column nesting
-            if st.button("✅ Save", help="Save changes", key=f"save_{session.session_id}", use_container_width=True):
-                if new_title.strip():
-                    success = self.chat_manager.update_session_title(
-                        session.session_id, new_title.strip(), user_email
-                    )
-                    if success:
-                        st.success("Title updated!")
-                        time.sleep(0.5)
-                st.session_state[edit_mode_key] = False
-                st.rerun()
-            
-            if st.button("❌ Cancel", help="Cancel editing", key=f"cancel_{session.session_id}", use_container_width=True):
-                st.session_state[edit_mode_key] = False
-                st.rerun()
+            # Save and Cancel buttons with improved styling
+            col1, col2 = st.columns(2)
+            with col1:
+                if st.button("✅ Save", help="Save changes", key=f"save_{session.session_id}", use_container_width=True):
+                    if new_title.strip():
+                        success = self.chat_manager.update_session_title(
+                            session.session_id, new_title.strip(), user_email
+                        )
+                        if success:
+                            st.success("Title updated!")
+                            time.sleep(0.5)
+                    st.session_state[edit_mode_key] = False
+                    st.rerun()
+            with col2:
+                if st.button("❌ Cancel", help="Cancel editing", key=f"cancel_{session.session_id}", use_container_width=True):
+                    st.session_state[edit_mode_key] = False
+                    st.rerun()
         
         else:
-            # Normal mode: show session title and action buttons
-            # Session button with title
-            if st.button(
-                session.title,
-                key=session_key,
-                help=f"Last updated: {self._format_timestamp(session.updated_at)}",
-                use_container_width=True
-            ):
-                # Load this session
-                st.session_state.current_session_id = session.session_id
-                st.session_state.messages = [
-                    {"role": msg.role, "content": msg.content}
-                    for msg in session.messages
-                ]
-                st.rerun()
-                return session.session_id
+            # Normal mode: show session title and action buttons with modern design
+            # Create a container for the session item
+            session_container = st.container()
             
-            # Action buttons in separate rows to avoid column issues
-            if st.button("✏️ Edit", help="Edit title", key=edit_key, use_container_width=True):
-                st.session_state[edit_mode_key] = True
-                st.rerun()
-            
-            # Delete button with confirmation
-            confirm_key = f"confirm_delete_{session.session_id}"
-            if st.session_state.get(confirm_key, False):
-                # Show confirmation buttons
-                st.warning("⚠️ Delete this chat?")
-                col1, col2 = st.columns(2)
-                with col1:
-                    if st.button("✅ Yes", key=f"confirm_yes_{session.session_id}", use_container_width=True):
-                        success = self.chat_manager.delete_session(session.session_id, user_email)
-                        if success:
-                            st.success("Chat deleted!")
-                            # Clear the current session if it was the deleted one
-                            if st.session_state.get("current_session_id") == session.session_id:
-                                st.session_state.current_session_id = None
-                                st.session_state.messages = []
-                            st.session_state[confirm_key] = False  # Reset confirmation
-                            time.sleep(0.5)
-                            st.rerun()
-                        else:
-                            st.error("Failed to delete chat")
-                        st.session_state[confirm_key] = False
-                with col2:
-                    if st.button("❌ No", key=f"confirm_no_{session.session_id}", use_container_width=True):
-                        st.session_state[confirm_key] = False
-                        st.rerun()
-            else:
-                # Show delete button
-                if st.button("🗑️ Delete", help="Delete chat", key=delete_key, use_container_width=True):
-                    st.session_state[confirm_key] = True
+            with session_container:
+                # Main session button with enhanced styling
+                if st.button(
+                    f"💬 {session.title[:35]}{'...' if len(session.title) > 35 else ''}",
+                    key=session_key,
+                    help=f"Last updated: {self._format_timestamp(session.updated_at)}",
+                    use_container_width=True
+                ):
+                    # Load this session
+                    st.session_state.current_session_id = session.session_id
+                    st.session_state.messages = [
+                        {"role": msg.role, "content": msg.content}
+                        for msg in session.messages
+                    ]
                     st.rerun()
+                    return session.session_id
+                
+                # Action buttons row with improved layout
+                col1, col2 = st.columns([1, 1])
+                with col1:
+                    if st.button("✏️", help="Edit title", key=edit_key, use_container_width=True):
+                        st.session_state[edit_mode_key] = True
+                        st.rerun()
+                with col2:
+                    # Delete button with confirmation
+                    confirm_key = f"confirm_delete_{session.session_id}"
+                    if st.session_state.get(confirm_key, False):
+                        if st.button("❌", help="Cancel delete", key=f"cancel_delete_{session.session_id}", use_container_width=True):
+                            st.session_state[confirm_key] = False
+                            st.rerun()
+                    else:
+                        if st.button("🗑️", help="Delete chat", key=delete_key, use_container_width=True):
+                            st.session_state[confirm_key] = True
+                            st.rerun()
+                
+                # Confirmation dialog
+                if st.session_state.get(confirm_key, False):
+                    st.markdown("""
+                    <div style="background: rgba(255, 193, 7, 0.15); border: 1px solid rgba(255, 193, 7, 0.3); 
+                                border-radius: 8px; padding: 8px; margin: 4px 0; text-align: center;">
+                        <div style="color: white; font-size: 12px;">Delete this chat?</div>
+                    </div>
+                    """, unsafe_allow_html=True)
+                    
+                    col1, col2 = st.columns(2)
+                    with col1:
+                        if st.button("✅ Yes", key=f"confirm_yes_{session.session_id}", use_container_width=True):
+                            success = self.chat_manager.delete_session(session.session_id, user_email)
+                            if success:
+                                # Clear the current session if it was the deleted one
+                                if st.session_state.get("current_session_id") == session.session_id:
+                                    st.session_state.current_session_id = None
+                                    st.session_state.messages = []
+                                st.session_state[confirm_key] = False
+                                st.rerun()
+                    with col2:
+                        if st.button("❌ No", key=f"confirm_no_{session.session_id}", use_container_width=True):
+                            st.session_state[confirm_key] = False
+                            st.rerun()
+                
+                # Add subtle separator between sessions
+                st.markdown('<div style="height: 4px;"></div>', unsafe_allow_html=True)
         
         return None
     

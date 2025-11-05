@@ -60,54 +60,225 @@ if "user_info" not in st.session_state:
 def main():
     """Main application."""
     st.title("SecureKnowledge AI")
+    st.markdown("""
+    <div style="text-align: center; margin-top: -1rem; margin-bottom: 2rem;">
+        <p style="font-size: 1.2rem; color: rgba(255,255,255,0.8); font-weight: 400; margin: 0;">
+            Enterprise Internal Knowledge Management System
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
     
-    # Add custom CSS for better chat history styling
+    # Add modern CSS for enhanced chat history styling
     st.markdown("""
     <style>
-    /* Sidebar styling */
-    .css-1d391kg {
-        background-color: #f8f9fa;
+    /* Import Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    /* Global sidebar styling */
+    .css-1d391kg, .css-1cypcdb, .css-17eq0hr {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+        overflow: hidden !important;
     }
     
-    /* Chat history buttons */
-    .stButton > button {
-        width: 100%;
-        text-align: left;
-        border-radius: 8px;
-        border: 1px solid #e0e0e0;
-        background-color: white;
-        padding: 8px 12px;
-        margin: 2px 0;
-        font-size: 14px;
-        color: #333;
-        transition: all 0.2s ease;
+    /* Sidebar content container */
+    .css-1d391kg .block-container {
+        padding-top: 1rem !important;
+        padding-bottom: 80px !important;
+        height: 100vh !important;
+        display: flex !important;
+        flex-direction: column !important;
     }
     
-    .stButton > button:hover {
-        background-color: #f0f0f0;
-        border-color: #d0d0d0;
+    /* Chat history scrollable container */
+    .chat-history-container {
+        flex: 1 !important;
+        overflow-y: auto !important;
+        padding-right: 8px !important;
+        margin-bottom: 1rem !important;
     }
     
-    /* New chat button styling */
-    .stButton > button[title="New Chat"] {
-        background-color: #007bff;
-        color: white;
-        border-color: #007bff;
-        font-weight: bold;
+    /* Fixed user footer */
+    .user-footer {
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        width: 21rem !important;
+        background: rgba(255,255,255,0.15) !important;
+        backdrop-filter: blur(15px) !important;
+        border-top: 1px solid rgba(255,255,255,0.2) !important;
+        padding: 12px 16px !important;
+        z-index: 1000 !important;
     }
     
-    .stButton > button[title="New Chat"]:hover {
-        background-color: #0056b3;
-        border-color: #0056b3;
+    /* Responsive footer width */
+    @media (max-width: 768px) {
+        .user-footer {
+            width: 100% !important;
+        }
+    }
+    
+    /* Chat history header */
+    .sidebar h3 {
+        color: white !important;
+        font-weight: 600 !important;
+        font-size: 1.1rem !important;
+        margin-bottom: 1rem !important;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+    
+    /* New Chat button - Primary CTA */
+    .stButton > button[data-testid*="new_chat"] {
+        width: 100% !important;
+        background: rgba(255,255,255,0.15) !important;
+        color: white !important;
+        border: 1px solid rgba(255,255,255,0.2) !important;
+        border-radius: 12px !important;
+        padding: 12px 16px !important;
+        font-weight: 600 !important;
+        font-size: 14px !important;
+        backdrop-filter: blur(10px) !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .stButton > button[data-testid*="new_chat"]:hover {
+        background: rgba(255,255,255,0.25) !important;
+        border-color: rgba(255,255,255,0.3) !important;
+        transform: translateY(-1px) !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+    }
+    
+    /* Time group headers */
+    .sidebar .markdown-text-container p strong {
+        color: rgba(255,255,255,0.8) !important;
+        font-size: 12px !important;
+        font-weight: 500 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+        margin-bottom: 8px !important;
+        display: block !important;
+    }
+    
+    /* Chat session buttons */
+    .stButton > button[data-testid*="session_"] {
+        width: 100% !important;
+        background: rgba(255,255,255,0.08) !important;
+        color: rgba(255,255,255,0.9) !important;
+        border: 1px solid rgba(255,255,255,0.1) !important;
+        border-radius: 8px !important;
+        padding: 10px 12px !important;
+        margin: 2px 0 !important;
+        font-size: 13px !important;
+        font-weight: 400 !important;
+        text-align: left !important;
+        transition: all 0.2s ease !important;
+        backdrop-filter: blur(5px) !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+    }
+    
+    .stButton > button[data-testid*="session_"]:hover {
+        background: rgba(255,255,255,0.15) !important;
+        border-color: rgba(255,255,255,0.2) !important;
+        transform: translateX(2px) !important;
     }
     
     /* Action buttons (edit, delete) */
-    .stButton > button[title="Edit title"],
-    .stButton > button[title="Delete chat"] {
-        width: auto;
-        min-width: 30px;
-        padding: 4px 8px;
-        font-size: 12px;
+    .stButton > button[data-testid*="edit_"],
+    .stButton > button[data-testid*="delete_"] {
+        width: 100% !important;
+        background: rgba(255,255,255,0.05) !important;
+        color: rgba(255,255,255,0.7) !important;
+        border: 1px solid rgba(255,255,255,0.1) !important;
+        border-radius: 6px !important;
+        padding: 6px 10px !important;
+        margin: 1px 0 !important;
+        font-size: 11px !important;
+        font-weight: 400 !important;
+        transition: all 0.2s ease !important;
+    }
+    
+    .stButton > button[data-testid*="edit_"]:hover {
+        background: rgba(52, 152, 219, 0.2) !important;
+        border-color: rgba(52, 152, 219, 0.3) !important;
+        color: white !important;
+    }
+    
+    .stButton > button[data-testid*="delete_"]:hover {
+        background: rgba(231, 76, 60, 0.2) !important;
+        border-color: rgba(231, 76, 60, 0.3) !important;
+        color: white !important;
+    }
+    
+    /* Confirmation buttons */
+    .stButton > button[data-testid*="confirm_yes_"] {
+        background: rgba(46, 204, 113, 0.2) !important;
+        color: white !important;
+        border: 1px solid rgba(46, 204, 113, 0.3) !important;
+    }
+    
+    .stButton > button[data-testid*="confirm_no_"] {
+        background: rgba(231, 76, 60, 0.2) !important;
+        color: white !important;
+        border: 1px solid rgba(231, 76, 60, 0.3) !important;
+    }
+    
+    /* Text input in edit mode */
+    .stTextInput > div > div > input {
+        background: rgba(255,255,255,0.1) !important;
+        color: white !important;
+        border: 1px solid rgba(255,255,255,0.2) !important;
+        border-radius: 6px !important;
+        font-size: 13px !important;
+    }
+    
+    .stTextInput > div > div > input:focus {
+        border-color: rgba(255,255,255,0.4) !important;
+        box-shadow: 0 0 0 2px rgba(255,255,255,0.1) !important;
+    }
+    
+    /* Warning messages */
+    .stAlert > div {
+        background: rgba(255, 193, 7, 0.15) !important;
+        border: 1px solid rgba(255, 193, 7, 0.3) !important;
+        color: white !important;
+        border-radius: 8px !important;
+    }
+    
+    /* Success messages */
+    .stSuccess > div {
+        background: rgba(46, 204, 113, 0.15) !important;
+        border: 1px solid rgba(46, 204, 113, 0.3) !important;
+        color: white !important;
+        border-radius: 8px !important;
+    }
+    
+    /* Dividers */
+    .sidebar hr {
+        border-color: rgba(255,255,255,0.2) !important;
+        margin: 1rem 0 !important;
+    }
+    
+    /* Scrollbar styling for chat history container */
+    .chat-history-container::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    .chat-history-container::-webkit-scrollbar-track {
+        background: rgba(255,255,255,0.1);
+        border-radius: 3px;
+    }
+    
+    .chat-history-container::-webkit-scrollbar-thumb {
+        background: rgba(255,255,255,0.3);
+        border-radius: 3px;
+    }
+    
+    .chat-history-container::-webkit-scrollbar-thumb:hover {
+        background: rgba(255,255,255,0.5);
     }
     
     /* Chat input styling */
@@ -122,9 +293,165 @@ def main():
         padding-bottom: 100px;
     }
     
-    /* Sidebar sections */
-    .sidebar-section {
-        margin-bottom: 20px;
+    /* Main app background */
+    .main .block-container {
+        background-color: #0e1117 !important;
+    }
+    
+    /* Authentication form styling */
+    .stTextInput > div > div > input[type="password"] {
+        padding-right: 50px !important;
+        background-color: #0e1117 !important;
+        border: 1px solid #464853 !important;
+        border-radius: 8px !important;
+        color: white !important;
+    }
+    
+    .stTextInput > div > div > input[type="password"]:focus {
+        border-color: #667eea !important;
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2) !important;
+    }
+    
+    /* Fix password input container */
+    .stTextInput > div > div {
+        position: relative !important;
+    }
+    
+    /* Style the eye icon button */
+    .stTextInput button[title="Show password"] {
+        position: absolute !important;
+        right: 8px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        background: transparent !important;
+        border: none !important;
+        color: #888 !important;
+        padding: 4px !important;
+        z-index: 10 !important;
+    }
+    
+    .stTextInput button[title="Show password"]:hover {
+        color: #667eea !important;
+        background: rgba(102, 126, 234, 0.1) !important;
+        border-radius: 4px !important;
+    }
+    
+    /* Authentication header styling */
+    .stTabs [data-baseweb="tab-list"] {
+        background: #1a1d23 !important;
+        border-radius: 8px !important;
+        padding: 4px !important;
+        border: 1px solid #464853 !important;
+    }
+    
+    .stTabs [data-baseweb="tab"] {
+        background: transparent !important;
+        color: rgba(255,255,255,0.7) !important;
+        border-radius: 6px !important;
+        padding: 8px 16px !important;
+        margin: 0 2px !important;
+    }
+    
+    .stTabs [aria-selected="true"] {
+        background: rgba(255,255,255,0.1) !important;
+        color: white !important;
+    }
+    
+    /* Form styling */
+    .stForm {
+        background: #1a1d23 !important;
+        border: 1px solid #464853 !important;
+        border-radius: 12px !important;
+        padding: 20px !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    }
+    
+    /* Form button styling */
+    .stForm button[type="submit"] {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 8px !important;
+        padding: 12px 24px !important;
+        font-weight: 600 !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .stForm button[type="submit"]:hover {
+        transform: translateY(-1px) !important;
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3) !important;
+    }
+    
+    /* Text input styling for auth forms */
+    .stTextInput > div > div > input {
+        background-color: #0e1117 !important;
+        border: 1px solid #464853 !important;
+        border-radius: 8px !important;
+        color: white !important;
+        padding: 12px 16px !important;
+    }
+    
+    .stTextInput > div > div > input:focus {
+        border-color: #667eea !important;
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2) !important;
+        background-color: #1a1d29 !important;
+    }
+    
+    /* Label styling */
+    .stTextInput > label {
+        color: rgba(255,255,255,0.9) !important;
+        font-weight: 500 !important;
+        margin-bottom: 8px !important;
+    }
+    
+    /* Main title styling */
+    .main h1 {
+        font-size: 3.5rem !important;
+        font-weight: 700 !important;
+        color: white !important;
+        text-align: center !important;
+        margin-bottom: 2rem !important;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        background-clip: text !important;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+    }
+    
+    /* Info message styling */
+    .stAlert[data-baseweb="notification"] p {
+        font-size: 1.4rem !important;
+        font-weight: 500 !important;
+        text-align: center !important;
+        color: rgba(255,255,255,0.9) !important;
+        margin: 0 !important;
+    }
+    
+    .stAlert[data-baseweb="notification"] {
+        background: rgba(102, 126, 234, 0.1) !important;
+        border: 1px solid rgba(102, 126, 234, 0.3) !important;
+        border-radius: 12px !important;
+        padding: 1.5rem !important;
+        margin: 2rem 0 !important;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .css-1d391kg {
+            width: 100% !important;
+        }
+        
+        .stChatFloatingInputContainer {
+            width: calc(100% - 40px) !important;
+        }
+        
+        .main h1 {
+            font-size: 2.5rem !important;
+        }
+        
+        .stAlert[data-baseweb="notification"] p {
+            font-size: 1.2rem !important;
+        }
     }
     </style>
     """, unsafe_allow_html=True)
