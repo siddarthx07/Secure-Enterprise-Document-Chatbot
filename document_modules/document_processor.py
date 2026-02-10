@@ -9,7 +9,7 @@ from typing import List, Dict, Any
 from pathlib import Path
 
 from pypdf import PdfReader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
 
 
