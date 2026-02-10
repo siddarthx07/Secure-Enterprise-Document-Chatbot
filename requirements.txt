@@ -23,6 +23,7 @@ pyrebase4>=4.5.0
 
 # Web Framework & UI
 requests>=2.31.0
+werkzeug>=2.0.0
 
 # Data Processing
 pandas>=2.0.0
