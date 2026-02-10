@@ -14,8 +14,15 @@ project_root = current_dir.parent
 sys.path.insert(0, str(project_root))
 
 import streamlit as st
-from dotenv import load_dotenv
 from typing import Dict, Any
+
+# Try to import dotenv, but don't fail if it's not available (for Streamlit Cloud)
+try:
+    from dotenv import load_dotenv
+    load_dotenv(project_root / "config" / ".env")
+except ImportError:
+    # Running on Streamlit Cloud - will use st.secrets instead
+    pass
 
 from document_modules.document_processor import DocumentProcessor
 from core.database import VectorDatabase
@@ -27,9 +34,6 @@ from utils.financial_filter import FinancialContentFilter, FilterAction
 from utils.audit_logger import AuditLogger
 from ui.chat_history_manager import ChatHistoryManager
 from ui.chat_sidebar import ChatSidebar
-
-# Load environment variables
-load_dotenv(project_root / "config" / ".env")
 
 # Constants
 DOCUMENT_STORAGE = os.environ.get("DOCUMENT_STORAGE", "./documents")
@@ -285,13 +289,13 @@ def main():
     
     /* Main app background */
     .main .block-container {
-        background-color: #0e1117 !important;
+        background-color: #001f3f !important;
     }
     
     /* Authentication form styling */
     .stTextInput > div > div > input[type="password"] {
         padding-right: 50px !important;
-        background-color: #0e1117 !important;
+        background-color: #001f3f !important;
         border: 1px solid #464853 !important;
         border-radius: 8px !important;
         color: white !important;
@@ -374,7 +378,7 @@ def main():
     
     /* Text input styling for auth forms */
     .stTextInput > div > div > input {
-        background-color: #0e1117 !important;
+        background-color: #001f3f !important;
         border: 1px solid #464853 !important;
         border-radius: 8px !important;
         color: white !important;
@@ -384,7 +388,7 @@ def main():
     .stTextInput > div > div > input:focus {
         border-color: #667eea !important;
         box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2) !important;
-        background-color: #1a1d29 !important;
+        background-color: #002855 !important;
     }
     
     /* Label styling */
